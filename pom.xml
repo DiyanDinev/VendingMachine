@@ -49,12 +49,24 @@
 	</dependencies>
 
 	<build>
+		<finalName>VendingMachine</finalName>
 		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+				        <failOnMissingWebXml>false</failOnMissingWebXml>
+						<packagingExcludes>**/VendingMachine/</packagingExcludes>
+				    </configuration>
+			</plugin>
+				
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
+	
+	
 
 </project>
